@@ -1,11 +1,17 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue';
+<script>
+import AppNav from "./components/appNav.vue";
+export default{ components: { AppNav } }
 </script>
 
 <template>
-  <HelloWorld/>
+<div>
+  <header class="app-header">
+    <app-nav></app-nav>
+  </header>
+  <main class="container">
+  <router-view></router-view>
+  </main>
+  </div>
 </template>
 
 <style>
